@@ -11,10 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #000;
             min-height: 100vh;
-            color: #e8e8e8;
+            color: #e5e5e5;
             line-height: 1.7;
         }
         .container {
@@ -23,65 +23,87 @@
             padding: 60px 24px;
         }
         .back-link {
-            display: inline-block;
-            color: #4fd1c5;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #10B981;
             text-decoration: none;
             margin-bottom: 32px;
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: 500;
         }
         .back-link:hover {
             text-decoration: underline;
         }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
             margin-bottom: 8px;
+        }
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 11px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
             color: #fff;
         }
         .updated {
-            color: #888;
+            color: #8e8e93;
             font-size: 14px;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
         h2 {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 600;
-            margin: 36px 0 16px;
+            margin: 32px 0 12px;
             color: #fff;
         }
         p {
-            color: #b8b8b8;
+            color: #a3a3a3;
             margin-bottom: 16px;
+            font-size: 15px;
         }
         ul {
-            padding-left: 24px;
+            padding-left: 20px;
             margin-bottom: 16px;
         }
         li {
-            color: #b8b8b8;
+            color: #a3a3a3;
             margin-bottom: 8px;
+            font-size: 15px;
+        }
+        li strong {
+            color: #e5e5e5;
         }
         .highlight-box {
-            background: rgba(79, 209, 197, 0.1);
-            border-left: 3px solid #4fd1c5;
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 3px solid #10B981;
             padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 12px 12px 0;
             margin: 24px 0;
         }
         .highlight-box p {
             margin-bottom: 0;
-            color: #e8e8e8;
+            color: #e5e5e5;
+            font-size: 15px;
         }
         .footer {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid #2c2c2e;
             text-align: center;
-            font-size: 14px;
-            color: #666;
+            font-size: 13px;
+            color: #48484a;
         }
         a {
-            color: #4fd1c5;
+            color: #10B981;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -89,7 +111,10 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to Support</a>
         
-        <h1>Privacy Policy</h1>
+        <div class="header">
+            <img src="app-icon.png" alt="Rebalance" class="app-icon">
+            <h1>Privacy Policy</h1>
+        </div>
         <p class="updated">Last updated: January 11, 2026</p>
 
         <h2>Overview</h2>
@@ -140,7 +165,7 @@
         <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
 
         <h2>Contact</h2>
-        <p>If you have any questions about this privacy policy or our practices, please contact us at: <a href="mailto:curiouschanh@gmail.com">curiouschanh@gmail.com</a></p>
+        <p>If you have any questions about this privacy policy, contact us at: <a href="mailto:curiouschanh@gmail.com">curiouschanh@gmail.com</a></p>
 
         <div class="footer">
             <p>© 2026 Rebalance. All rights reserved.</p>
@@ -148,4 +173,3 @@
     </div>
 </body>
 </html>
-

@@ -11,10 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #000;
             min-height: 100vh;
-            color: #e8e8e8;
+            color: #e5e5e5;
             line-height: 1.6;
         }
         .container {
@@ -22,106 +22,177 @@
             margin: 0 auto;
             padding: 60px 24px;
         }
-        .logo {
-            font-size: 48px;
-            margin-bottom: 8px;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-        .tagline {
-            color: #4fd1c5;
-            font-size: 18px;
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
             margin-bottom: 48px;
         }
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+        }
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .tagline {
+            font-size: 16px;
+            color: #10B981;
+            font-weight: 500;
+        }
         h2 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             margin: 32px 0 16px;
             color: #fff;
         }
-        p, li {
-            color: #b8b8b8;
-            margin-bottom: 12px;
-        }
-        ul {
-            padding-left: 24px;
+        p {
+            color: #a3a3a3;
+            margin-bottom: 16px;
+            font-size: 15px;
         }
         .faq-item {
-            background: rgba(255,255,255,0.05);
+            background: #1c1c1e;
             border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 16px;
+            padding: 16px;
+            margin-bottom: 12px;
         }
         .faq-item h3 {
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
             color: #fff;
             margin-bottom: 8px;
         }
         .faq-item p {
             margin-bottom: 0;
             font-size: 14px;
+            color: #8e8e93;
         }
-        .contact-box {
-            background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 48px;
-            text-align: center;
-        }
-        .contact-box h2 {
-            color: #1a1a2e;
-            margin: 0 0 12px;
-        }
-        .contact-box p {
-            color: #1a1a2e;
-            margin-bottom: 16px;
-        }
-        .contact-box a {
+        .color-indicator {
             display: inline-block;
-            background: #1a1a2e;
-            color: #4fd1c5;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        .productive { background: #10B981; }
+        .scroll { background: #F97316; }
+        .contact-section {
+            background: #1c1c1e;
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid #2c2c2e;
+        }
+        .contact-section h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+        .contact-section p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: #fff;
             padding: 12px 32px;
-            border-radius: 8px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.2s;
+            font-size: 15px;
+            transition: transform 0.2s, opacity 0.2s;
         }
-        .contact-box a:hover {
-            transform: translateY(-2px);
+        .contact-btn:hover {
+            transform: scale(0.98);
+            opacity: 0.9;
         }
         .footer {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid #2c2c2e;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
         }
         .footer a {
-            color: #4fd1c5;
+            color: #10B981;
             text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .how-it-works {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .step {
+            background: #1c1c1e;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .step-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+        .step-content h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            font-size: 13px;
+            color: #8e8e93;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">⚖️</div>
-        <h1>Rebalance</h1>
-        <p class="tagline">Earn Time, Scroll Less</p>
+        <div class="header">
+            <img src="app-icon.png" alt="Rebalance" class="app-icon">
+            <div class="header-text">
+                <h1>Rebalance</h1>
+                <p class="tagline">Earn Time, Scroll Less</p>
+            </div>
+        </div>
 
-        <h2>About Rebalance</h2>
-        <p>Rebalance transforms screen time management into an engaging game. Use productive apps to earn credits, spend them on social media. When credits run out, scroll apps are blocked.</p>
+        <h2>How It Works</h2>
+        <div class="how-it-works">
+            <div class="step">
+                <span class="step-icon">📱</span>
+                <div class="step-content">
+                    <h4><span class="color-indicator productive"></span>Use Productive Apps</h4>
+                    <p>Reading, learning, fitness apps earn you screen time credits</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-icon">⏱️</span>
+                <div class="step-content">
+                    <h4><span class="color-indicator scroll"></span>Spend on Scroll Apps</h4>
+                    <p>Social media and entertainment consume your credits</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-icon">🛡️</span>
+                <div class="step-content">
+                    <h4>Auto Shield</h4>
+                    <p>When credits run out, scroll apps are blocked automatically</p>
+                </div>
+            </div>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         
-        <div class="faq-item">
-            <h3>How does Rebalance work?</h3>
-            <p>Rebalance uses Apple's Screen Time APIs to track your app usage. Use productive apps to earn credits, which are then consumed when using scroll apps. When your credits run out, scroll apps are automatically blocked.</p>
-        </div>
-
         <div class="faq-item">
             <h3>Why do I need to grant Screen Time permission?</h3>
             <p>Screen Time permission is required to monitor app usage and apply shields when your credits run out. This is an Apple requirement for apps that manage screen time.</p>
@@ -139,20 +210,24 @@
 
         <div class="faq-item">
             <h3>How do I change my earn ratio?</h3>
-            <p>Go to Settings in the app to adjust your earn ratio. This controls how much scroll time you earn for each minute of productive app usage.</p>
+            <p>On the home screen, tap the earn ratio card to adjust it. This controls how much scroll time you earn for each minute of productive app usage.</p>
         </div>
 
-        <div class="contact-box">
+        <div class="faq-item">
+            <h3>What apps count as productive?</h3>
+            <p>You decide! Select which apps are "productive" when you set up the app. Common choices include Books, educational apps, fitness trackers, and work tools.</p>
+        </div>
+
+        <div class="contact-section">
             <h2>Need Help?</h2>
             <p>Have a question or found a bug? We'd love to hear from you.</p>
-            <a href="mailto:curiouschanh@gmail.com">Contact Support</a>
+            <a href="mailto:curiouschanh@gmail.com" class="contact-btn">Contact Support</a>
         </div>
 
         <div class="footer">
             <p><a href="privacy.html">Privacy Policy</a></p>
-            <p style="margin-top: 16px; color: #666;">© 2026 Rebalance. All rights reserved.</p>
+            <p style="margin-top: 16px; color: #48484a;">© 2026 Rebalance. All rights reserved.</p>
         </div>
     </div>
 </body>
 </html>
-
